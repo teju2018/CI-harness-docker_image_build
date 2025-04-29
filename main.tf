@@ -1,28 +1,15 @@
-provider "google" {
-  project = "saicharan-457910"
-  zone    = "us-central1-a"
-}
+resource "google_container_cluster" "primary" {
+  name     = var.cluster_name
+  location = var.region
 
-resource "google_compute_instance" "instance" {
-  name         = "instance-1"
-  machine_type = "e2-medium"
-  zone         = "us-central1-a"
+  deletion_protection = false
 
-  boot_disk {
-    initialize_params {
-      image = "centos-stream-9"
-    }
+  initial_node_count = var.node_count
+
+  node_config {
+    machine_type = var.node_machine_type
+    disk_size_gb = 70
   }
 
-  network_interface {
-    network = "default"
-    access_config {
-      # This is required to assign an external IP
-    }
-  }
+  remove_default_node_pool = false
 }
-
-output "instance-ip" {
-  value = google_compute_instance.instance.network_interface[0].access_config[0].nat_ip
-}
-
