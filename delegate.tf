@@ -28,8 +28,8 @@ module "delegate" {
   source = "harness/harness-delegate/kubernetes"
   version = "0.1.8"
 
-  account_id = "ZDrS4zmESsCAgbsbRvdsAQ"
-  delegate_token = "MTBiNTMwMDUxYmU1NmZjOTQ3ZmVlYjZhNzQ1ZDEwNjM="
+  account_id = "ucHySz2jQKKWQweZdXyCog"
+  delegate_token = "NTRhYTY0Mjg3NThkNjBiNjMzNzhjOGQyNjEwOTQyZjY="
   delegate_name = "terraform-delegate"
   deploy_mode = "KUBERNETES"
   namespace = "harness-delegate-ng"
@@ -38,5 +38,6 @@ module "delegate" {
   replicas = 1
   upgrader_enabled = true
 }
+
 
 
