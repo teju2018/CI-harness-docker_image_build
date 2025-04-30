@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: calculator-app
-        image: saicharan12121/java_calculator:1
+        image: ganesh6498/java-harness:latest
         ports:
         - containerPort: 8085
         # env:
