@@ -1,7 +1,7 @@
 variable "project_id" {
   description = "The GCP project ID"
   type        = string
-  default     = "sam-458313"  
+  default     = "ferrous-plating-458312-q5"  
 }
 
 variable "region" {
@@ -25,5 +25,5 @@ variable "node_count" {
 variable "node_machine_type" {
   description = "The type of machine to use for nodes in the Kubernetes cluster"
   type        = string
-  default     = "e2-standard-4"  // Adjust based on the required machine type
+  default     = "e2-standard-2"  // Adjust based on the required machine type
 }
