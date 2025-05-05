@@ -23,13 +23,12 @@ provider "helm" {
   }
 }
 
-
 module "delegate" {
   source = "harness/harness-delegate/kubernetes"
   version = "0.1.8"
 
-  account_id = "ucHySz2jQKKWQweZdXyCog"
-  delegate_token = "NTRhYTY0Mjg3NThkNjBiNjMzNzhjOGQyNjEwOTQyZjY="
+  account_id = "347FmVsmR6mi4o_O8pTfug"
+  delegate_token = "YmU1YzkyMWZkMjdlNDM2ZjVkNzZkNmU0MTk0MWMyODU="
   delegate_name = "terraform-delegate"
   deploy_mode = "KUBERNETES"
   namespace = "harness-delegate-ng"
@@ -38,6 +37,3 @@ module "delegate" {
   replicas = 1
   upgrader_enabled = true
 }
-
-
-
