@@ -1,7 +1,7 @@
 variable "project_id" {
   description = "The GCP project ID"
   type        = string
-  default     = "ferrous-plating-458312-q5"  
+  default     = "clam-458312"  
 }
 
 variable "region" {
