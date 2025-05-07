@@ -37,8 +37,4 @@ module "delegate" {
   replicas = 1
   upgrader_enabled = true
 }
-provider "helm" {
-  kubernetes {
-    config_path = "~/.kube/config"
-  }
-}
+
